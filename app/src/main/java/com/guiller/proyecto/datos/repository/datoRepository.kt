@@ -16,7 +16,6 @@ class datoRepository @Inject constructor(private val pref: prefRepository) {
     private val retrofitH = llamadaRetrofit.usuariosGeneral()
     private val DTB = App.getDB().peticiones()
 
-
     //Solicitando cuentas del usuario seleccionado
     suspend fun datosCuentas(): Boolean {
         return try {
