@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.guiller.proyecto.datos.DatosReView.usuariosGeneralAdapter
 import com.guiller.proyecto.datos.classes.getUsuariosGeneral.responseUsuariosItem
 import com.guiller.proyecto.datos.repository.mainRepository
-import com.guiller.proyecto.datos.storeDato.prefRepository
 import com.guiller.proyecto.datos.retrofit.llamadaRetrofit
 import com.guiller.proyecto.datos.retrofit.retrofit
 import com.guiller.proyecto.datos.room.entidades.entidadUsuario
