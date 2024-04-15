@@ -39,17 +39,18 @@ class SlideshowViewModel @Inject constructor(private val repositorio: posUsuario
         }
     }
 
+
+
+    private suspend fun solicitarDatos(){
+        usuario = repositorio.getUsario()
+        extraerDatos(usuario)
+    }
     //Extaer datos de usuario
     private fun extraerDatos(usuario: entidadUsuario) {
         _nombre.value = usuario.nombre!!
         _apellido.value = usuario.apellido!!
         _direccion.value = usuario.direccion!!
 
-    }
-
-    private suspend fun solicitarDatos(){
-        usuario = repositorio.getUsario()
-        extraerDatos(usuario)
     }
 
 
@@ -69,9 +70,3 @@ class SlideshowViewModel @Inject constructor(private val repositorio: posUsuario
 
 }
 
-class SlideshowViewModelFactory(private val repositorio: posUsuarioRepository) :
-    ViewModelProvider.Factory {
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return SlideshowViewModel(repositorio) as T
-    }
-}

@@ -106,10 +106,6 @@ class HomeViewModel @Inject constructor(private val repositorio: datoRepository)
 
 
     }
-
-
-
-
     fun casoFavorita(caso: Int) {
         cambioFavTodo(caso)
     }

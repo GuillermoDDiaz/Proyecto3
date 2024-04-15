@@ -28,7 +28,7 @@ suspend fun actualizarUsuario(direc:String, id:Int)
     suspend fun eleminarDTBusuario()
 
     @Insert
-    suspend fun insertarCuenta(entidadCuentas: entidadCuentas)
+    suspend fun insertarCuenta(entidadCuentas: List<entidadCuentas>)
 
     @Query("DELETE FROM entidadCuentas")
     suspend fun eleminarDTBcuenta()

@@ -1,6 +1,7 @@
 package com.guiller.proyecto.datos.repository
 
 import com.guiller.proyecto.datos.classes.getCuentaUsuario.cUsuario
+import com.guiller.proyecto.datos.mapper.cuentasEntidad
 import com.guiller.proyecto.datos.retrofit.llamadaRetrofit
 import com.guiller.proyecto.datos.retrofit.retrofit
 import com.guiller.proyecto.datos.room.App
@@ -43,20 +44,8 @@ class datoRepository @Inject constructor(private val pref: prefRepository) {
     private suspend fun insertarDTBcuenta(re: cUsuario?) {
         if (re != null) {
 
-            var entidadcuenta: entidadCuentas
-            re.forEach {
-                entidadcuenta = entidadCuentas(
-                    it.id,
-                    it.usuario.nombre,
-                    it.cuenta,
-                    it.nombre,
-                    it.saldo,
-                    it.tipoCuenta.id,
-                    it.tipoCuenta.nombre,
-                    it.favorita,
-                )
-                DTB.insertarCuenta(entidadcuenta)
-            }
+            val cuentas = re.cuentasEntidad()
+            DTB.insertarCuenta(cuentas)
         }
     }
 

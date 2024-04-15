@@ -1,5 +1,6 @@
 package com.guiller.proyecto.ui.datoUsuario
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,16 +15,16 @@ import com.guiller.proyecto.R
 import com.guiller.proyecto.databinding.FragmentDatoUsuariosBinding
 import com.guiller.proyecto.datos.repository.posUsuarioRepository
 import com.guiller.proyecto.ui.dialog.dialogBP
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class datoUsuarioFragment : Fragment() {
 
     private var _binding: FragmentDatoUsuariosBinding? = null
     private var paso = false
     private val binding get() = _binding!!
-    private val viewModel: SlideshowViewModel by viewModels {
-        val repository = posUsuarioRepository()
-        SlideshowViewModelFactory(repository)
-    }
+    private val viewModel: SlideshowViewModel by viewModels ()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -7,10 +7,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.guiller.proyecto.datos.DatosReView.usuariosGeneralAdapter
 import com.guiller.proyecto.datos.classes.getUsuariosGeneral.responseUsuariosItem
+import com.guiller.proyecto.datos.mapper.datosEntidad
 import com.guiller.proyecto.datos.repository.mainRepository
-import com.guiller.proyecto.datos.retrofit.llamadaRetrofit
-import com.guiller.proyecto.datos.retrofit.retrofit
-import com.guiller.proyecto.datos.room.entidades.entidadUsuario
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -37,26 +35,22 @@ class MainViewModel @Inject constructor(private val repositorio: mainRepository)
         }
 
         viewModelScope.launch {
-
-            val retrofitR = llamadaRetrofit.usuariosGeneral()
-            val respuesta = retrofitR.create(retrofit::class.java).getUsuariosGeneral()
-            if (respuesta.isSuccessful) {
-                _usuarios.value = usuariosGeneralAdapter(respuesta.body()!!) { selectUsuario(it) }
-            }
-
+            val body = repositorio.getUsuarios()
+            _usuarios.value = usuariosGeneralAdapter(body) { selectUsuario(it) }
         }
 
     }
 
     private fun selectUsuario(usuario:responseUsuariosItem) {
 
-        val entidadUsuario = entidadUsuario(
-            usuario.id,
-            usuario.nombre,
-            usuario.apellido,
-            usuario.direccion,
-            usuario.edad
-        )
+        val entidadUsuario = usuario.datosEntidad()
+//        val entidadUsuario = entidadUsuario(
+//            usuario.id,
+//            usuario.nombre,
+//            usuario.apellido,
+//            usuario.direccion,
+//            usuario.edad
+//        )
         viewModelScope.launch{
             _nombre.value = usuario.nombre
             _exito.value = repositorio.ingresarUsuario(entidadUsuario)
