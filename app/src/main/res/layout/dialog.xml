@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="50dp"
+    android:layout_height="200dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="BP en linea"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:id="@+id/titulo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="transaccion guardad con exito"
+            android:layout_marginTop="15dp"
+            android:textSize="18sp"
+            android:id="@+id/mensaje"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

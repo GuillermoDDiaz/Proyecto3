@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="Blanco">#F6F6F6</color>
+    <color name="primary">#024989</color>
+    <color name="primary_select">#007BB3</color>
+
+
+    <color name="text">#024989</color>
+    <color name="sub">#9E656565</color>
+
+    <color name="subs">#D3D3D3</color>
+    <color name="backGround">#E0E0E0</color>
+    <color name="texto_detalle">#B1B1B1</color>
+
+
+    <!-- tarjeta de cuentas -->
+    <color name="card_fondo">#F6F6F6</color>
+    <color name="card_color_text_titulo">#024989</color>
+    <color name="card_texto_detalle">#232323</color>
+
+    <!-- tarjeta de detalle cuenta-->
+    <color name="card_deta_fondo">#F6F6F6</color>
+    <color name="card_deta_text_titulo">#222020</color>
+    <color name="card_deta_texto_detalle">#B1B1B1</color>
+    <color name="credito">#36B640</color>
+    <color name="debito">#FB1707</color>
+
+    <!-- Encabezado detalle cuenta - nueva Transaccion-->
+    <color name="car_detalle_transaccion">#FFD800</color>
+
+    <!--Botones general-->
+    <color name="botones">#FFD800</color>
+    <color name="botones_texto">#024989</color>
+
+
+</resources>

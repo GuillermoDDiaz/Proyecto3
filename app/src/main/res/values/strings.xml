@@ -1,0 +1,40 @@
+<resources>
+     <string name="app_name">Proyecto</string>
+    <string name="title_activity_menu_navegacion">Menu_Navegacion</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_Salir">Salir</string>
+
+    <string name="menu_home">Cuentas</string>
+    <string name="menu_slideshow">Datos usuario</string>
+
+    <string name="moneda">L</string>
+
+
+
+    <string name="favoritas">Favoritas</string>
+    <string name="todas">Todas</string>
+
+
+    <!-- tarjeta Cuenta -->
+    <string name="card_saldo_disponible">Saldo disponible</string>
+
+   <!-- Botones-->
+    <string name="nueva_transac">Nueva transacción</string>
+    <string name="guardar">Guardar</string>
+    <string name="guardar_cambios">Guardar cambios</string>
+
+
+
+    <string name="creDeb">Debito/Credito</string>
+    <string name="monto">Monto</string>
+
+    <!--fragmento datos cuenta -->
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="direccion">Dirección</string>
+
+</resources>
